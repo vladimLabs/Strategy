@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _Source.AttackSystem
+namespace AttackSystem
 {
     public class AttackPerformer 
     {
@@ -19,8 +19,10 @@ namespace _Source.AttackSystem
 
         public void PerformAttack()
         {
-            if(_attackStrategy != null)
+            if (_attackStrategy != null)
+            {
                 _attackStrategy.Attack(_animator);
+            }
         }
     }
 }

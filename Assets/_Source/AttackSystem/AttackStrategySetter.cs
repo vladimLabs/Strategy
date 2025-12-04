@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _Source.AttackSystem
+namespace AttackSystem
 {
     public class AttackStrategySetter : MonoBehaviour
     {

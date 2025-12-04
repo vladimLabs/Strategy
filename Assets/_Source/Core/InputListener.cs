@@ -1,27 +1,30 @@
-using _Source.AttackSystem;
+using AttackSystem;
 using UnityEngine;
 
-public class InputListener : MonoBehaviour
+namespace Core
 {
-    [SerializeField] private KeyCode _attackKeyCode;
-    private AttackPerformer _attackPerformer;
-
-    public void Construct(AttackPerformer attackPerformer)
+    public class InputListener : MonoBehaviour
     {
-        _attackPerformer = attackPerformer;
-    }
+        [SerializeField] private KeyCode _attackKeyCode;
+        private AttackPerformer _attackPerformer;
 
-    private void Update()
-    {
-        CheckAttack();
-    }
-
-    private void CheckAttack()
-    {
-        if (Input.GetKeyDown(_attackKeyCode))
+        public void Construct(AttackPerformer attackPerformer)
         {
-            if(_attackPerformer != null)
-                _attackPerformer.PerformAttack();
+            _attackPerformer = attackPerformer;
+        }
+
+        private void Update()
+        {
+            CheckAttack();
+        }
+
+        private void CheckAttack()
+        {
+            if (Input.GetKeyDown(_attackKeyCode))
+            {
+                if (_attackPerformer != null)
+                    _attackPerformer.PerformAttack();
+            }
         }
     }
 }

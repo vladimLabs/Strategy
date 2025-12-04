@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _Source.AttackSystem
+namespace AttackSystem
 {
     public class Attack2 : IAttackStrategy
     {
